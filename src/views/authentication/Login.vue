@@ -34,7 +34,9 @@
                   </div>
                   <button type="submit" class="btn btn-black">Login</button> <br>
                   <br>
+                  <router-link  to="/register">
                   <a href="url" style="color:white;">Need an account? Click here to register</a>
+                  </router-link>
                </form>
             </div>
          </div>

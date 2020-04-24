@@ -53,7 +53,7 @@
                   </div>
                   <button type="submit" class="btn btn-black">Register</button> <br>
                   <br>
-                  <a href="url" style="color:white;">Need an account? Click here to register</a>
+                  
                </form>
             </div>
          </div>
