@@ -15,13 +15,12 @@
       >
         <div class="card-body">
           <div class="d-flex justify-content-between">
-            <h5 class="card-title">{{ booking.author.username }}</h5>
+            <h5 class="card-title">Created by: {{ booking.author.username }}</h5>
           </div>
 
           <h6 class="card-subtitle mb-2 text-muted">Athlete: {{ booking.title }}</h6>
 
           <p class="card-text2">Location: {{ booking.location }}</p>
-            <p class="card-text2">Date: {{ date }}</p>
           <div
             v-if="booking.author._id === $store.state.userId"
             class="d-flex justify-content-between"
@@ -62,7 +61,6 @@
 
 <script>
 import * as bookingService from "../../services/BookingService";
-import moment from "moment";
 
 export default {
   name: "bookings-all",
@@ -80,9 +78,6 @@ export default {
     });
   },
   methods: {
-    bookingIsLate: function(date) {
-      return moment(date).isBefore();
-    },
     cancelModal: function() {
       this.$refs.modal.hide();
       this.currentBookingId = null;
@@ -95,13 +90,6 @@ export default {
       );
       this.bookings.splice(index, 1);
       this.currentBookingId = null;
-    },
-    markAsCompleted: function(booking) {
-      booking.completed = true;
-      const request = {
-        booking: booking
-      };
-      bookingService.updateBooking(request);
     }
   }
 };
