@@ -9,9 +9,10 @@ import BookingsEdit from './views/bookings/BookingsEdit.vue'
 import Athletes from './views/info/Athletes.vue'
 
 import * as auth from './services/AuthService'
-
+// This is the Vue router page in order to manage the routing from page to page
 Vue.use(Router)
 
+// these are the routes that specify which each routes are in which file
 export default new Router({
   routes: [
     {
@@ -24,7 +25,7 @@ export default new Router({
       name: 'bookings-all',
       component: BookingsAll,
       beforeEnter: (to, from, next) => {
-        // Navigation Guard protects this route. User must be logged in, else will be routed to login page
+        // This ensures that the user must be logged in order to view the specific navbar tabs. this is called a Navgaurd
         if (auth.isLoggedIn()) {
           next();
         } else {

@@ -2,7 +2,7 @@
     <div>
     <h1>Create Booking</h1>
     <form class="custom-form" v-on:submit.prevent="onSubmit">
-
+<!--Pretty much the same as the create bookings page -->
       <div class="form-group">
         <h3>Athletes</h3>
 

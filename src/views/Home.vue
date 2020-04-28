@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  // @ is an alias to /src
+  // points to the hello world vue file
   import HelloWorld from '@/components/HelloWorld.vue'
 
   export default {

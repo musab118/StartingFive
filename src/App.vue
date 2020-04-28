@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// Imports the Navbar and the Footer files
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 
@@ -19,7 +20,7 @@ export default {
     Footer
   },
   beforeCreate: function() {
-    // Ensure that on app boot, we check if the user is authenticated or not
+    // on boot check whether the user is authenticated or logged in.
     this.$store.dispatch("authenticate");
   }
 };

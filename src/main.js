@@ -9,6 +9,7 @@ import BootstrapVue from 'bootstrap-vue'
 import moment from 'moment'
 
 Vue.use(BootstrapVue);
+// changes the environment to production rather then development
 Vue.config.productionTip = process.env.NODE_ENV === 'production';
 Vue.filter('date', (value) => {
   if (!value) {
